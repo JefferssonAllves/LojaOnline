@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main-content' %}
+    <h1>{{aba}}</h1>
+    {% for i in teste %}
+        <div class="row list">
+            {% for i in teste %}
+                <div class="col-xl-3 col-lg-4 col-12 col-sm-6 mb-4">
+                    <a href="?view={{aba}}">
+                        <div class="card">
+                            <div class="position-relative">
+                                <img class="card-img-top" src="{{img}}" alt="Card image cap">
+                                <span class="badge badge-pill badge-primary position-absolute badge-top-left">New</span>
+                                <span class="badge badge-pill badge-secondary position-absolute badge-top-left-2">Trending</span>
+                            </div>
+                            <div class="card-body">
+                                <p class="list-item-heading mb-4">Pellentesque ac enim sed purus auctor convallis ut in nibh.</p>
+                                <footer>
+                                    <p class="text-muted text-small mb-0 font-weight-light">18.08.2018</p>
+                                </footer>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'style' %}
+    <link rel="stylesheet" href="{% static '/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}">
+{% endblock %}
+{% block 'page-icon' %}
+    <i class="ik ik-menu bg-primary"></i>
+{% endblock %}
+{% block 'page' %}
+    Revendedores Cadastrados
+{% endblock%}
+{% block 'caminho_pagina' %}
+    <li class="breadcrumb-item">
+        <a href=".">Revendedor</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">
+        Cadastrados
+    </li>
+{% endblock%}
+
+<!-- MAIN -->
+{% block 'main-content' %}
+    <div class="card-body">
+        <div class="dt-responsive">
+            <div id="simpletable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h5>Tabela de revendedores cadastrados</h5>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div id="simpletable_filter" class="dataTables_filter">
+                            <label>Pesquisa:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="simpletable"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="simpletable" class="table table-striped table-bordered nowrap dataTable" role="grid" aria-describedby="simpletable_info">
+                            <thead>
+                                <tr role="row">
+                                    <th class="sorting_asc" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 206.438px;">Name</th>
+                                    <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 308.438px;">Position</th>
+                                    <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 151.875px;">Office</th>
+                                    <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 86.9062px;">Age</th>
+                                    <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 158.312px;">Start date</th>
+                                    <th class="sorting" tabindex="0" aria-controls="simpletable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 114.031px;">Salary</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr role="row" class="odd">
+                                    <td class="sorting_1">Airi Satou</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>33</td>
+                                    <td>2008/11/28</td>
+                                    <td>$162,700</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block 'script' %}
+    <script src="{% static '/node_modules/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static '/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static '/js/datatables.js' %}"></script>
+{% endblock %}

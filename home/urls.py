@@ -1,0 +1,28 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('logout/', views.logout, name='logout'),
+    path('revendedores/', views.revendedores, name='revendedores'),
+    path('cadastro_revendedor/', views.cadastro_revendedor, name='cadastro_revendedor'),
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
